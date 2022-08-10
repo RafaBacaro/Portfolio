@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="d-flex justify-content-end align-items-end flex-column inputDiv">
+        <p type="text" disabled value="subResult" class="sub">{{subText}}</p>
+        <p type="text" disabled value="calcResult" class="main">{{mainText}}</p>
+    </div>
+    <div class="buttonsDiv">
+        <p-table [value]="calcValue">
+            <ng-template pTemplate="body" let-row>
+                <tr>
+                    <ng-container *ngFor="let col of cols">
+                        <td (click)="clickedOnBtn(row[col.field])" class="{{row[col.field]}}">
+                            {{row[col.field]}}
+                        </td>
+                    </ng-container>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

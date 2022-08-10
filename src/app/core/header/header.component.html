@@ -1,0 +1,11 @@
+<nav class="navbar sticky-top navbar-expand-sm">
+    <p-menubar [model]="items" class="w-100"></p-menubar>
+</nav>
+
+<div class="container w-100 d-flex justify-content-center" #divCalc>
+    <p-overlayPanel #opCalc [showCloseIcon]="true" id="myCalc" [appendTo]="divCalc">
+        <ng-template pTemplate>
+            <calculator></calculator>
+        </ng-template>
+    </p-overlayPanel>
+</div>
